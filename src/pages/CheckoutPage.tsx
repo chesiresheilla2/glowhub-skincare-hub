@@ -241,7 +241,7 @@ const CheckoutPage = () => {
                         </p>
                       </div>
                       <span className="font-medium">
-                        ${(item.product.price * item.quantity).toFixed(2)}
+                        KSh {(item.product.price * item.quantity).toFixed(2)}
                       </span>
                     </div>
                   ))}
@@ -251,7 +251,7 @@ const CheckoutPage = () => {
                 <div className="space-y-3 border-t border-border pt-4 mb-6">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Subtotal</span>
-                    <span>${subtotal.toFixed(2)}</span>
+                    <span>KSh {subtotal.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Shipping</span>
@@ -259,17 +259,17 @@ const CheckoutPage = () => {
                       {shipping === 0 ? (
                         <span className="text-primary">FREE</span>
                       ) : (
-                        `$${shipping.toFixed(2)}`
+                        `KSh ${shipping.toFixed(2)}`
                       )}
                     </span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Tax (10%)</span>
-                    <span>${tax.toFixed(2)}</span>
+                    <span>KSh {tax.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between font-semibold text-lg border-t border-border pt-3">
                     <span>Total</span>
-                    <span>${total.toFixed(2)}</span>
+                    <span>KSh {total.toFixed(2)}</span>
                   </div>
                 </div>
 
@@ -279,7 +279,7 @@ const CheckoutPage = () => {
                   className="w-full"
                   disabled={isProcessing}
                 >
-                  {isProcessing ? 'Processing...' : `Place Order - $${total.toFixed(2)}`}
+                  {isProcessing ? 'Processing...' : `Place Order - KSh ${total.toFixed(2)}`}
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center mt-4">
