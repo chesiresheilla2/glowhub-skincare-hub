@@ -51,7 +51,7 @@ export const WishlistItem = ({ product }: WishlistItemProps) => {
         </p>
 
         <div className="flex items-center justify-between mt-3">
-          <span className="font-semibold text-lg">${product.price.toFixed(2)}</span>
+          <span className="font-semibold text-lg">KSh {product.price.toFixed(2)}</span>
 
           <div className="flex items-center gap-2">
             <Button

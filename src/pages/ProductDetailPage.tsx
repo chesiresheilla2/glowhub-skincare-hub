@@ -126,11 +126,11 @@ const ProductDetailPage = () => {
             {/* Price */}
             <div className="flex items-baseline gap-3">
               <span className="text-3xl font-semibold">
-                ${product.price.toFixed(2)}
+                KSh {product.price.toFixed(2)}
               </span>
               {product.originalPrice && (
                 <span className="text-xl text-muted-foreground line-through">
-                  ${product.originalPrice.toFixed(2)}
+                  KSh {product.originalPrice.toFixed(2)}
                 </span>
               )}
             </div>
@@ -203,7 +203,7 @@ const ProductDetailPage = () => {
             <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border">
               <div className="flex flex-col items-center text-center gap-2 p-3">
                 <Truck className="w-6 h-6 text-primary" />
-                <span className="text-xs text-muted-foreground">Free Shipping Over $50</span>
+                <span className="text-xs text-muted-foreground">Free Shipping Over KSh 50</span>
               </div>
               <div className="flex flex-col items-center text-center gap-2 p-3">
                 <Shield className="w-6 h-6 text-primary" />

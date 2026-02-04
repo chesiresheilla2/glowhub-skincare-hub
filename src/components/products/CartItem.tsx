@@ -63,11 +63,11 @@ export const CartItem = ({ item }: CartItemProps) => {
           {/* Price */}
           <div className="text-right">
             <span className="font-semibold">
-              ${(product.price * quantity).toFixed(2)}
+              KSh {(product.price * quantity).toFixed(2)}
             </span>
             {quantity > 1 && (
               <p className="text-xs text-muted-foreground">
-                ${product.price.toFixed(2)} each
+                KSh {product.price.toFixed(2)} each
               </p>
             )}
           </div>

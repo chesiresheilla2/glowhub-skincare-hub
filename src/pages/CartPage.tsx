@@ -76,7 +76,7 @@ const CartPage = () => {
               <div className="space-y-4 mb-6">
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Subtotal</span>
-                  <span>${subtotal.toFixed(2)}</span>
+                  <span>KSh {subtotal.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Shipping</span>
@@ -84,18 +84,18 @@ const CartPage = () => {
                     {shipping === 0 ? (
                       <span className="text-primary">FREE</span>
                     ) : (
-                      `$${shipping.toFixed(2)}`
+                      `KSh ${shipping.toFixed(2)}`
                     )}
                   </span>
                 </div>
                 {subtotal < 50 && (
                   <p className="text-xs text-muted-foreground">
-                    Add ${(50 - subtotal).toFixed(2)} more for free shipping!
+                    Add KSh {(50 - subtotal).toFixed(2)} more for free shipping!
                   </p>
                 )}
                 <div className="border-t border-border pt-4 flex justify-between font-semibold">
                   <span>Total</span>
-                  <span>${total.toFixed(2)}</span>
+                  <span>KSh {total.toFixed(2)}</span>
                 </div>
               </div>
 
