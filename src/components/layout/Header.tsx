@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, ShoppingCart, Heart } from 'lucide-react';
+import { useCart } from '@/context/CartContext';
+import { useWishlist } from '@/context/WishlistContext';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -19,6 +21,7 @@ const navigation = [
     name: 'Shop By',
     href: '#',
     children: [
+      { name: 'All Products', href: '/products' },
       { name: 'Skin Type', href: '/shop/skin-type' },
       { name: 'Skin Concern', href: '/shop/skin-concern' },
       { name: 'Key Ingredients', href: '/shop/ingredients' },
@@ -32,8 +35,12 @@ export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const location = useLocation();
+  const { getCartCount } = useCart();
+  const { getWishlistCount } = useWishlist();
 
   const isActive = (href: string) => location.pathname === href;
+  const cartCount = getCartCount();
+  const wishlistCount = getWishlistCount();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
@@ -95,8 +102,36 @@ export const Header = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
+          {/* Icons & CTA */}
+          <div className="hidden lg:flex items-center gap-4">
+            {/* Wishlist */}
+            <Link
+              to="/wishlist"
+              className="relative p-2 text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Wishlist"
+            >
+              <Heart className="w-5 h-5" />
+              {wishlistCount > 0 && (
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full flex items-center justify-center">
+                  {wishlistCount}
+                </span>
+              )}
+            </Link>
+
+            {/* Cart */}
+            <Link
+              to="/cart"
+              className="relative p-2 text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Cart"
+            >
+              <ShoppingCart className="w-5 h-5" />
+              {cartCount > 0 && (
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full flex items-center justify-center">
+                  {cartCount}
+                </span>
+              )}
+            </Link>
+
             <Link to="/signup" className="btn-hero text-sm py-3 px-6">
               Get Started
             </Link>

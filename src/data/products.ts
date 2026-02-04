@@ -1,0 +1,197 @@
+export interface Product {
+  id: string;
+  name: string;
+  description: string;
+  shortDescription: string;
+  price: number;
+  originalPrice?: number;
+  image: string;
+  category: 'cleansing' | 'toning' | 'serums' | 'moisturizing' | 'sunscreen';
+  skinType: string[];
+  ingredients: string[];
+  rating: number;
+  reviews: number;
+  inStock: boolean;
+}
+
+export const products: Product[] = [
+  {
+    id: 'gentle-foam-cleanser',
+    name: 'Gentle Foam Cleanser',
+    description: 'A pH-balanced, gentle foam cleanser that effectively removes impurities without stripping the skin of its natural moisture. Enriched with chamomile and green tea extracts for a soothing cleanse.',
+    shortDescription: 'pH-balanced foam cleanser with chamomile & green tea',
+    price: 28.00,
+    originalPrice: 35.00,
+    image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=400&fit=crop',
+    category: 'cleansing',
+    skinType: ['All Skin Types', 'Sensitive'],
+    ingredients: ['Chamomile Extract', 'Green Tea', 'Glycerin'],
+    rating: 4.8,
+    reviews: 324,
+    inStock: true,
+  },
+  {
+    id: 'oil-cleanser-balm',
+    name: 'Hydrating Oil Cleanser Balm',
+    description: 'A luxurious oil-to-milk cleanser balm that melts away makeup and sunscreen while deeply nourishing the skin. Perfect for double cleansing routine.',
+    shortDescription: 'Oil-to-milk balm for makeup removal',
+    price: 42.00,
+    image: 'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=400&h=400&fit=crop',
+    category: 'cleansing',
+    skinType: ['Dry', 'Normal'],
+    ingredients: ['Jojoba Oil', 'Vitamin E', 'Rosehip Oil'],
+    rating: 4.9,
+    reviews: 189,
+    inStock: true,
+  },
+  {
+    id: 'hydrating-toner',
+    name: 'Rose Hydrating Toner',
+    description: 'A refreshing, alcohol-free toner infused with rose water and hyaluronic acid. Prepares the skin for better absorption of serums and moisturizers.',
+    shortDescription: 'Alcohol-free toner with rose water & HA',
+    price: 32.00,
+    image: 'https://images.unsplash.com/photo-1570194065650-d99fb4b38b15?w=400&h=400&fit=crop',
+    category: 'toning',
+    skinType: ['All Skin Types'],
+    ingredients: ['Rose Water', 'Hyaluronic Acid', 'Niacinamide'],
+    rating: 4.7,
+    reviews: 256,
+    inStock: true,
+  },
+  {
+    id: 'exfoliating-toner',
+    name: 'AHA/BHA Exfoliating Toner',
+    description: 'A gentle exfoliating toner with a blend of glycolic and salicylic acids. Helps unclog pores and improve skin texture without irritation.',
+    shortDescription: 'Gentle exfoliating toner with AHA/BHA',
+    price: 38.00,
+    image: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=400&fit=crop',
+    category: 'toning',
+    skinType: ['Oily', 'Combination'],
+    ingredients: ['Glycolic Acid', 'Salicylic Acid', 'Aloe Vera'],
+    rating: 4.6,
+    reviews: 198,
+    inStock: true,
+  },
+  {
+    id: 'vitamin-c-serum',
+    name: 'Brightening Vitamin C Serum',
+    description: 'A potent 20% Vitamin C serum that brightens skin tone, fades dark spots, and boosts collagen production. Stabilized formula for maximum efficacy.',
+    shortDescription: '20% Vitamin C for brightening & anti-aging',
+    price: 58.00,
+    originalPrice: 72.00,
+    image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=400&fit=crop',
+    category: 'serums',
+    skinType: ['All Skin Types'],
+    ingredients: ['Vitamin C', 'Vitamin E', 'Ferulic Acid'],
+    rating: 4.9,
+    reviews: 512,
+    inStock: true,
+  },
+  {
+    id: 'hyaluronic-serum',
+    name: 'Triple Hyaluronic Acid Serum',
+    description: 'A multi-molecular weight hyaluronic acid serum that hydrates at multiple skin layers. Plumps fine lines and leaves skin bouncy and dewy.',
+    shortDescription: 'Multi-weight HA for deep hydration',
+    price: 45.00,
+    image: 'https://images.unsplash.com/photo-1617897903246-719242758050?w=400&h=400&fit=crop',
+    category: 'serums',
+    skinType: ['All Skin Types', 'Dehydrated'],
+    ingredients: ['Hyaluronic Acid', 'Panthenol', 'Sodium PCA'],
+    rating: 4.8,
+    reviews: 423,
+    inStock: true,
+  },
+  {
+    id: 'retinol-serum',
+    name: 'Retinol Renewal Serum',
+    description: 'A gentle yet effective retinol serum encapsulated for slow release. Reduces fine lines, improves texture, and promotes cell turnover.',
+    shortDescription: 'Encapsulated retinol for anti-aging',
+    price: 65.00,
+    image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=400&fit=crop',
+    category: 'serums',
+    skinType: ['Mature', 'Normal'],
+    ingredients: ['Retinol', 'Squalane', 'Ceramides'],
+    rating: 4.7,
+    reviews: 287,
+    inStock: true,
+  },
+  {
+    id: 'niacinamide-serum',
+    name: 'Pore-Refining Niacinamide Serum',
+    description: 'A 10% niacinamide serum that minimizes pores, controls sebum, and strengthens the skin barrier. Perfect for oily and acne-prone skin.',
+    shortDescription: '10% Niacinamide for pore control',
+    price: 36.00,
+    image: 'https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=400&h=400&fit=crop',
+    category: 'serums',
+    skinType: ['Oily', 'Acne-Prone'],
+    ingredients: ['Niacinamide', 'Zinc PCA', 'Hyaluronic Acid'],
+    rating: 4.8,
+    reviews: 356,
+    inStock: true,
+  },
+  {
+    id: 'gel-moisturizer',
+    name: 'Lightweight Gel Moisturizer',
+    description: 'A refreshing water-gel moisturizer that provides all-day hydration without heaviness. Perfect for humid climates and oily skin types.',
+    shortDescription: 'Water-gel formula for lightweight hydration',
+    price: 34.00,
+    image: 'https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?w=400&h=400&fit=crop',
+    category: 'moisturizing',
+    skinType: ['Oily', 'Combination'],
+    ingredients: ['Hyaluronic Acid', 'Aloe Vera', 'Niacinamide'],
+    rating: 4.6,
+    reviews: 278,
+    inStock: true,
+  },
+  {
+    id: 'rich-cream',
+    name: 'Barrier Repair Rich Cream',
+    description: 'A deeply nourishing cream with ceramides and peptides that repairs and strengthens the skin barrier. Ideal for dry and mature skin.',
+    shortDescription: 'Rich cream with ceramides for barrier repair',
+    price: 52.00,
+    image: 'https://images.unsplash.com/photo-1570194065650-d99fb4b38b15?w=400&h=400&fit=crop',
+    category: 'moisturizing',
+    skinType: ['Dry', 'Mature'],
+    ingredients: ['Ceramides', 'Peptides', 'Shea Butter'],
+    rating: 4.9,
+    reviews: 198,
+    inStock: true,
+  },
+  {
+    id: 'spf50-sunscreen',
+    name: 'Invisible Shield SPF 50+',
+    description: 'A weightless, invisible sunscreen with broad-spectrum SPF 50+ PA++++. No white cast, water-resistant, and perfect under makeup.',
+    shortDescription: 'Weightless SPF 50+ with no white cast',
+    price: 38.00,
+    originalPrice: 45.00,
+    image: 'https://images.unsplash.com/photo-1556227702-d1e4e7b5c232?w=400&h=400&fit=crop',
+    category: 'sunscreen',
+    skinType: ['All Skin Types'],
+    ingredients: ['Zinc Oxide', 'Vitamin E', 'Niacinamide'],
+    rating: 4.9,
+    reviews: 634,
+    inStock: true,
+  },
+  {
+    id: 'tinted-sunscreen',
+    name: 'Tinted Glow Sunscreen SPF 40',
+    description: 'A tinted mineral sunscreen that evens out skin tone while providing excellent sun protection. Gives a natural, dewy finish.',
+    shortDescription: 'Tinted mineral SPF 40 with glow finish',
+    price: 42.00,
+    image: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&h=400&fit=crop',
+    category: 'sunscreen',
+    skinType: ['All Skin Types'],
+    ingredients: ['Titanium Dioxide', 'Hyaluronic Acid', 'Vitamin C'],
+    rating: 4.7,
+    reviews: 245,
+    inStock: true,
+  },
+];
+
+export const getProductById = (id: string): Product | undefined => {
+  return products.find(product => product.id === id);
+};
+
+export const getProductsByCategory = (category: Product['category']): Product[] => {
+  return products.filter(product => product.category === category);
+};
