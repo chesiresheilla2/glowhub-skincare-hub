@@ -12,13 +12,13 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Location',
-    content: 'San Francisco, CA',
+    content: 'Nairobi, Kenya',
     description: 'Online skincare marketplace',
   },
   {
     icon: Clock,
     title: 'Support Hours',
-    content: 'Mon - Fri, 9am - 6pm PST',
+    content: 'Mon - Fri, 9am - 6pm EAT',
     description: 'Weekend email support available',
   },
 ];
