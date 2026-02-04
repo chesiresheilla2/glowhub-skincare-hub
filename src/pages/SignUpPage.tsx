@@ -51,6 +51,13 @@ const SignUpPage = () => {
             {/* Right: Form */}
             <div className="lg:pl-12">
               <div className="card-elevated p-8 md:p-10">
+                {/* Logo */}
+                <div className="text-center mb-8">
+                  <span className="text-3xl font-serif font-semibold tracking-tight">
+                    Glow<span className="text-primary">Hub</span>
+                  </span>
+                </div>
+
                 {isSubmitted ? (
                   <div className="text-center py-8">
                     <div className="w-16 h-16 rounded-full bg-sage-light flex items-center justify-center mx-auto mb-6">
@@ -70,8 +77,8 @@ const SignUpPage = () => {
                   </div>
                 ) : (
                   <>
-                    <h2 className="font-serif text-2xl font-medium mb-2">Create Your Account</h2>
-                    <p className="text-muted-foreground text-sm mb-8">
+                    <h2 className="font-serif text-2xl font-medium mb-2 text-center">Create Your Account</h2>
+                    <p className="text-muted-foreground text-sm mb-8 text-center">
                       It's free and takes less than a minute.
                     </p>
 
